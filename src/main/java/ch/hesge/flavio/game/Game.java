@@ -8,7 +8,7 @@ public class Game {
 
     private int rounds = 0;
     private Tumbler tumbler;
-    private ArrayList<Player> players;
+    private ArrayList<Player> players = new ArrayList<Player>();
 
     public Game() {
         tumbler = new Tumbler();

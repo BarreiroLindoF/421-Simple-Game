@@ -5,13 +5,13 @@ import ch.hesge.flavio.dice.Tumbler;
 
 public class Rules {
 
-    private static final int MAX_TRIES = 3;
+    private static final int MAX_ROUNDS = 3;
 
     public static boolean keepPlaying(int tries) {
-        return tries < MAX_TRIES;
+        return tries < MAX_ROUNDS;
     }
 
-    public static boolean contains(Tumbler tumbler, int value) {
+    public static boolean contains(Tumbler tumbler, int value) {      
         for (Dice dice : tumbler.getDices()) {
             if (dice.getValue() == value) {
                 return true;

@@ -1,6 +1,5 @@
 package ch.hesge.flavio.dice;
 
-import ch.hesge.flavio.dice.Dice;
 import java.util.ArrayList;
 
 public class Tumbler {
@@ -9,26 +8,24 @@ public class Tumbler {
     
     public Tumbler(){
         dices = new ArrayList<Dice>(3);
-        createDices();
+        createDices(3);
     }
     
     public Tumbler(int numberOfDices){
         dices = new ArrayList<Dice>(numberOfDices);
-        createDices();
+        createDices(numberOfDices);
     }    
     
     public Tumbler(ArrayList<Dice> dices){
         this.dices = dices;
     }
     
-    private void createDices(){
-        for (int i = 0; i < dices.size(); i++) {
+    private void createDices(int numberOfDices){
+        for (int i = 0; i < numberOfDices; i++) {
             dices.add(new Dice());
         }
     }
     
-    
-            
     public void shakeTumbler(){
         for (Dice dice : dices){
             dice.roll();
