@@ -1,19 +1,22 @@
 package ch.hesge.flavio;
 
-public class ListOfDices {
-    
+public class Tumbler {
     
     private Dice[] dices;
     
-    public ListOfDices(){
+    public Tumbler(){
         dices = new Dice[3];
         createDices();
     }
     
-    public ListOfDices(int numberOfDices){
+    public Tumbler(int numberOfDices){
         dices = new Dice[numberOfDices];
         createDices();
     }    
+    
+    public Tumbler(Dice[] dices){
+        this.dices = dices;
+    }
     
     private void createDices(){
         for (int i = 0; i < dices.length; i++) {
@@ -21,7 +24,7 @@ public class ListOfDices {
         }
     }
     
-    private boolean contains(int value) {
+    public boolean contains(int value) {
         for (Dice dice : dices) {
             if (dice.getValue() == value) {
                 return true;
@@ -29,12 +32,8 @@ public class ListOfDices {
         }
         return false;
     }
-        
-    public boolean victory() {
-        return contains(4) && contains(2) && contains(1);
-    }
-    
-    public void rollDices(){
+            
+    public void shakeTumbler(){
         for (Dice dice : dices){
             dice.roll();
         }
@@ -42,6 +41,10 @@ public class ListOfDices {
 
     public int length(){
         return dices.length;
+    }
+    
+    public Dice[] getDices(){
+        return dices;
     }
     
 }
