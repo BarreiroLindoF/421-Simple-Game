@@ -1,5 +1,6 @@
-package ch.hesge.flavio;
+package ch.hesge.flavio.game;
 
+import ch.hesge.flavio.game.Game;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 

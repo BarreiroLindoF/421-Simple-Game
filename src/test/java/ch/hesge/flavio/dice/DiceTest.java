@@ -1,5 +1,6 @@
-package ch.hesge.flavio;
+package ch.hesge.flavio.dice;
 
+import ch.hesge.flavio.dice.Dice;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 

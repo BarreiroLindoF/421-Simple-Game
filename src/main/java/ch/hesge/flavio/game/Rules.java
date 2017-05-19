@@ -1,4 +1,7 @@
-package ch.hesge.flavio;
+package ch.hesge.flavio.game;
+
+import ch.hesge.flavio.dice.Dice;
+import ch.hesge.flavio.dice.Tumbler;
 
 public class Rules {
 
@@ -8,11 +11,20 @@ public class Rules {
         return tries < MAX_TRIES;
     }
 
-    private static boolean contains421(Tumbler tumbler) {
-        return tumbler.contains(4) && tumbler.contains(2) && tumbler.contains(1);
+    public static boolean contains(Tumbler tumbler, int value) {
+        for (Dice dice : tumbler.getDices()) {
+            if (dice.getValue() == value) {
+                return true;
+            }
+        }
+        return false;
     }
     
-    private static boolean contains555(Tumbler tumbler){
+    private static boolean contains421(Tumbler tumbler) {
+        return contains(tumbler, 4) && contains(tumbler, 2) && contains(tumbler, 1);
+    }
+    
+    public static boolean contains555(Tumbler tumbler){
         for (Dice dice : tumbler.getDices()){
             if (dice.getValue() != 5){
                 return false;

@@ -1,4 +1,7 @@
-package ch.hesge.flavio;
+package ch.hesge.flavio.player;
+
+import ch.hesge.flavio.dice.Tumbler;
+import ch.hesge.flavio.game.Rules;
 
 public class Player {
 

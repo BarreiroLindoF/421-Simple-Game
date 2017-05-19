@@ -1,4 +1,4 @@
-package ch.hesge.flavio;
+package ch.hesge.flavio.dice;
 
 public class Dice {
 
